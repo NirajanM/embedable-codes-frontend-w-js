@@ -1,0 +1,120 @@
+<style>
+    .faq-section {
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+    .faq-item {
+        margin-bottom: 10px;
+    }
+
+    .faq-question {
+        cursor: pointer;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .faq-question::after {
+        content: "\02C5";
+        position: absolute;
+        color: rgba(0, 0, 0, 0.354);
+        top: 0;
+        right: 0;
+    }
+
+    .faq-item:hover .faq-question::after {
+        color: black;
+    }
+
+    .faq-question.expanded::after {
+        content: "\02C4";
+    }
+
+    .faq-answer {
+        display: none;
+    }
+</style>
+
+
+<div class="faq-section">
+    <h2>FAQ</h2>
+
+    <div class="faq-item">
+        <h3 class="faq-question"> Is this product safe for sensitive skin? </h3>
+        <p class="faq-answer"> Yes, this product is designed for regular application on sensitive skin. However, we
+            recommend familiarising
+            yourself with the ingredients and avoiding use of this product if it contains anything you’re allergic to.
+            We
+            also
+            recommend doing a patch test on your inner wrist before using on the lips. </p>
+    </div>
+    <hr />
+    <div class="faq-item">
+        <h3 class="faq-question"> Can I use this balm under my eyes? </h3>
+        <p class="faq-answer"> Yes, this balm is multifunctional and can be used on the skin around the eyes. Press and
+            dab
+            balm gently in a
+            stippling motion on the skin around the eyes.
+            Avoid contact with the eye and eyelashes, as direct contact with the eye may result in stinging. </p>
+
+    </div>
+    <hr />
+    <div class="faq-item">
+        <h3 class="faq-question"> Can I use this balm if I’m pregnant? </h3>
+        <p class="faq-answer"> There can be an increase in skin sensitivity during pregnancy, so you may want to consult
+            a
+            healthcare professional
+            before use. This balm contains Castor Oil, which some expectant mothers may have increased skin sensitivity
+            to
+            during pregnancy. Castor Oil can trigger muscle cramps and potentially induce labour in pregnant mothers. It
+            is
+            not
+            recommended to consume Castor Oil during pregnancy. Avoid direct ingestion of Castor Oil if pregnant.
+            Ingredients
+            such as Hyaluronic Acid, Vitamin B3 & Vitamin B5 are generally considered safe for topical use during
+            pregnancy.
+        </p>
+    </div>
+    <hr />
+    <div class="faq-item">
+        <h3 class="faq-question"> Can I use this balm if I just had lip filler injections? </h3>
+        <p class="faq-answer"> Dermatologists recommend avoiding the use of cosmetic products on or around the mouth for
+            at
+            least 24 hours after
+            treatment. An increase in swelling and skin sensitivity may lead to having an uncommon adverse reaction to
+            any
+            cosmetic product during that period. If your swelling has significantly reduced after that time, you may
+            proceed
+            to
+            apply this balm cautiously. If your skin is still too sensitive for application, you can wash the balm off
+            with
+            a
+            gentle soap and lukewarm water. </p>
+
+    </div>
+    <hr />
+    <div class="faq-item">
+        <h3 class="faq-question"> How do I dispose of the empty package responsibly? </h3>
+        <p class="faq-answer"> You can dispose of the Kraft paper package by placing it in your compost bin or in the
+            non-recyclable waste bin, as
+            it is readily biodegradable and will decompose naturally when exposed to the elements. </p>
+
+    </div>
+    <hr />
+</div>
+<script>
+    let faqQuestions = document.querySelectorAll('.faq-question');
+    console.log(faqQuestions);
+    for (let i = 0; i < faqQuestions.length; i++) {
+        faqQuestions[i].addEventListener('click', function () {
+            let answer = this.nextElementSibling;
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                this.classList.remove('expanded');
+            } else {
+                answer.style.display = 'block';
+                this.classList.add('expanded');
+            }
+        });
+    }
+</script>
