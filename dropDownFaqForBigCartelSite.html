@@ -108,6 +108,7 @@
     for (let i = 0; i < faqQuestions.length; i++) {
         faqQuestions[i].addEventListener('click', function () {
             let answer = this.nextElementSibling;
+            console.log(answer.h3);
             if (answer.style.display === 'block') {
                 answer.style.display = 'none';
                 this.classList.remove('expanded');

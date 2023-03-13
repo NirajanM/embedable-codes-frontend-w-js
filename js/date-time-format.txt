@@ -1,0 +1,16 @@
+<script>
+const now = new Date();
+function getMonthName(monthNumber) {
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return monthNames[Number(monthNumber) - 1];
+};
+const day = now.getDate().toString().padStart(2, '0');
+const month = (now.getMonth() + 1).toString().padStart(2, '0');
+const year = now.getFullYear().toString();
+const hours = now.getHours().toString().padStart(2, '0');
+const minutes = now.getMinutes().toString().padStart(2, '0');
+const seconds = now.getSeconds().toString().padStart(2, '0');
+const formattedDateTime = `${day} ${getMonthName(month)} ${year} ${hours}:${minutes}:${seconds}`;
+document.getElementById("txt").innerText = formattedDateTime;
+</script>
