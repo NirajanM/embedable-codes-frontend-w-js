@@ -104,11 +104,10 @@
 </div>
 <script>
     let faqQuestions = document.querySelectorAll('.faq-question');
-    console.log(faqQuestions);
     for (let i = 0; i < faqQuestions.length; i++) {
         faqQuestions[i].addEventListener('click', function () {
             let answer = this.nextElementSibling;
-            console.log(answer.h3);
+            console.log(answer);
             if (answer.style.display === 'block') {
                 answer.style.display = 'none';
                 this.classList.remove('expanded');
