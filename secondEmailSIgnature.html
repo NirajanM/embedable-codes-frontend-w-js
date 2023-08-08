@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email signature</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.6875rem;
+      }
+      a {
+        text-decoration: none;
+        color: #4f4f4f;
+      }
+      table {
+        height: 17.375rem;
+        width: 28.125rem;
+      }
+      #photo {
+        width: 12.875rem;
+        height: 9.625rem;
+      }
+      #photo div {
+        height: 7.125rem;
+        border-right: 1px solid #d6d6d6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #photo div img {
+        height: 1.4375rem;
+      }
+      #content {
+        width: 15.25rem;
+        height: 9.625rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #container {
+        height: 5.6875rem;
+        width: 11.375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .Name {
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 0.875rem;
+      }
+      #upper,
+      #lower {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .title {
+        font-family: arial;
+        font-size: 0.75rem;
+      }
+      .web a {
+        color: #0a55ff;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      #second {
+        width: 28.125rem;
+        height: 7.75rem;
+      }
+      #row-2 {
+        background: url("https://raw.githubusercontent.com/NirajanM/emailsignature-photos/main/Group%202.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #row-2 div {
+        width: 14.0625rem;
+        height: 7.75rem;
+        float: right;
+        clear: both;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #row-2 div span {
+        width: 10.3125rem;
+        height: 3.375rem;
+        font-size: 0.9375rem;
+        font-weight: bold;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <table style="border: none">
+      <tr id="first-row">
+        <td id="photo">
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/NirajanM/emailsignature-photos/main/Group%2077%20Copy.svg"
+              alt="logo"
+            />
+          </div>
+        </td>
+        <td id="content">
+          <div id="container">
+            <div id="upper">
+              <span class="Name">Desislava Shivacheva</span>
+              <span class="title">Senior Web Designer</span>
+            </div>
+            <div id="lower">
+              <span class="number"
+                ><a href="tel:+01 (2) 3 45 67 89 10"
+                  >+01 (2) 3 45 67 89 10</a
+                ></span
+              >
+              <span class="email"
+                ><a href="mailto:desislava.shivacheva@warehow.com"
+                  >desislava.shivacheva@warehow.com</a
+                ></span
+              >
+              <span class="web"
+                ><a href="https://www.warehow.com">www.warehow.com </a></span
+              >
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="second">
+        <td colspan="2" id="row-2">
+          <div>
+            <span>
+              One Stop Solution for Fashion & Small Home Ecommerce Fulfilment
+            </span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
